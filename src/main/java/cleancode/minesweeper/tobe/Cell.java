@@ -61,17 +61,17 @@ public class Cell {
     }
 
     public String getSign() {
-        if(isOpened) {
-            if(isLandMind) {
+        if (isOpened) {
+            if (isLandMind) {
                 return LAND_MINE_SIGN;
             }
-            if(hasLandMineCount()) {
+            if (hasLandMineCount()) {
                 return String.valueOf(nearbyLandMineCount);
             }
             return EMPTY_SIGN;
         }
 
-        if(isFlagged) {
+        if (isFlagged) {
             return FLAG_SIGN;
         }
         return UNCHECKED_SIGN;
